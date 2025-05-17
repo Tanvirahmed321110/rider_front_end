@@ -425,6 +425,13 @@ img {
     width: 130px;
 }
 
+/*  */
+.single-task .task-profile {
+    padding: 5px 8px;
+    background-color: rgb(252, 245, 232);
+    border-radius: 42px;
+}
+
 
 /*task  Status  */
 .single-task .status {
