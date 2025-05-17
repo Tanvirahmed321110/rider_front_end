@@ -327,11 +327,7 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
 
 
 // Usage tab for visa information page
-setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
-    information: 'into_1',
-    progessing_time: 'into_2',
-    faq: 'into_3',
-    office: 'into_4',
-    visa_free: 'into_5',
-    specification: 'into_6',
+setupTabs('.regular-assign-btn .tab', '.tab-contents .tab-content', {
+    regular_task: 'regular_task_content',
+    assign_task: 'assign_task_content'
 });

@@ -140,12 +140,10 @@ img {
 }
 
 .sidebar-close-btn:hover {
-    border-color: var(--primary-hover-color);
+    background-color: var(--green);
 }
 
-.sidebar-close-btn:hover i {
-    color: var(--primary-hover-color);
-}
+
 
 @keyframes alltime {
     0% {

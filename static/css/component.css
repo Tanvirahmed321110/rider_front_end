@@ -2204,10 +2204,13 @@ input[type="radio"]:checked::after {
 /* tab content */
 .tab-content {
     display: none;
+    opacity: 0;
+    transition: .2s linear;
 }
 
 .tab-content.active {
     display: grid;
+    opacity: 1;
 }
 
 
