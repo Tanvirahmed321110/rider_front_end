@@ -1,0 +1,695 @@
+@import url('./variable.css');
+@import url('./component.css');
+@import url('./custom_class.css');
+
+
+/*
+===============================
+=====  Header Start Here  =====
+===============================
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    height: 64px;
+    box-shadow: var(--shadow-2);
+    padding: 8px 16px;
+    background-color: var(--sidebar-header-bg);
+    border-bottom: 4px solid var(--border-color2);
+    border-bottom: 6px solid var(--white);
+}
+
+header .left {
+    width: 340px;
+}
+
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    border-color: #f1eae3;
+    border-color: #fff;
+    cursor: pointer;
+    padding: 2px;
+    position: relative;
+}
+
+.profile::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--gold);
+}
+
+.profile img {
+    border-radius: 50%;
+    padding: 0;
+}
+
+
+
+/* Sliding background */
+.active-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    /* since we have 2 buttons */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+
+
+
+/* Profile dropdown */
+.profile-dropdown-img {
+    padding: 3px;
+    border: 2px solid var(--border-color);
+}
+
+
+.profile .click-dropdown .item {
+    padding: 12px 16px;
+}
+
+img {
+    background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+/*
+================================
+=====  Sidebar Start Here  =====
+================================
+*/
+.sidebar {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 300px;
+    min-height: calc(100dvh - 64px);
+    z-index: 10;
+    box-shadow: var(--shadow-3);
+    transition: transform .4s linear;
+    background-color: var(--sidebar-header-bg);
+    border-right: 6px solid var(--white);
+}
+
+.sidebar.close {
+    transform: translateX(-290px);
+}
+
+/*=====  sidebar-close-btn  =====*/
+.sidebar-close-btn {
+    width: 44px;
+    height: 42px;
+    box-shadow: var(--shadow-3);
+    border: 3px solid var(--border-color2);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+.sidebar-close-btn i {
+    /* animation: alltime 1s linear infinite; */
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s ease-in;
+    color: var(--border-color);
+}
+
+.sidebar-close-btn:hover {
+    border-color: var(--primary-hover-color);
+}
+
+.sidebar-close-btn:hover i {
+    color: var(--primary-hover-color);
+}
+
+@keyframes alltime {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 6deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+
+
+/*=====  sidebar menu  =====*/
+.sidebar-menu {
+    /* padding-top: 6px; */
+    height: calc(100dvh - 260px);
+    overflow-y: auto;
+}
+
+.sidebar-menu.my-has-scrollbar {
+    overflow: hidden;
+    scrollbar-width: thin;
+}
+
+/* Show scrollbar only on hover */
+.sidebar-menu.my-has-scrollbar:hover {
+    overflow: auto;
+}
+
+/* Chrome, Edge, Safari */
+.sidebar-menu.my-has-scrollbar-sm::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+    background-color: transparent;
+}
+
+.sidebar-menu.my-has-scrollbar-sm:hover::-webkit-scrollbar {
+    background-color: var(--red);
+    background-color: #18527c;
+    width: 8px;
+    border: 1px solid transparent;
+}
+
+.sidebar-menu.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
+    background-color: #1f91e2;
+}
+
+.sidebar a:active {
+    transform: translateY(2px);
+}
+
+
+
+
+
+/*=====  Sidebar main menu  =====*/
+.sidebar-main-menu {
+    padding: 11px 16px;
+    font-size: var(--fs-md);
+    border-bottom: 1px solid var(--gray);
+    cursor: pointer;
+    color: var(--dark);
+    color: var(--border-color);
+    font-weight: 400;
+    position: relative;
+}
+
+.sidebar-main-menu::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 16px;
+    width: 0px;
+    height: 12px;
+    border-top-right-radius: 12px;
+    background-color: var(--border-color2);
+    transform: rotate(44deg);
+    transition: .24s linear;
+}
+
+.sidebar-main-menu:hover::after,
+.sidebar-main-menu.active::after {
+    width: 12px;
+}
+
+.sidebar-main-menu:hover,
+.sidebar-main-menu.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    /* background-color: var(--primary-hover-color); */
+}
+
+.sidebar-main-menu.active i {
+    color: var(--border-color);
+}
+
+.sidebar-main-menu img {
+    width: 28px;
+    padding: 3px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 2px;
+}
+
+
+.sidebar-main-menu:hover i {
+    color: var(--white);
+}
+
+.sidebar-main-menu i {
+    transition: transform 0.4s ease-in-out;
+    font-size: var(--fs-xl);
+    color: var(--border-color);
+    font-weight: 400;
+}
+
+
+/*====  sidebar bottom  =====*/
+.sidebar-bottom .sidebar-main-menu i {
+    font-size: var(--fs-xl);
+}
+
+.sidebar-bottom .sidebar-main-menu {
+    gap: 10px
+}
+
+
+/*=====  sidebar dropdown menu  =====*/
+.sidebar-dropdown-menu {
+    /* background-color: var(--gray); */
+    margin-left: 16px;
+    max-height: 0px;
+    visibility: hidden;
+    transition: max-height .8s linear, visibility .8s linear, opacity .8s linear;
+    border-left: 1px solid var(--orange);
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+
+.sidebar-dropdown-menu.active {
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.sidebar-dropdown-menu i {
+    font-size: var(--fs-sm);
+}
+
+.sidebar-dropdown-menu .dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    color: var(--border-color);
+    font-weight: 400;
+    padding-left: 36px;
+    position: relative;
+}
+
+.sidebar-dropdown-menu .dropdown-item::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--orange);
+}
+
+.sidebar-dropdown-menu .dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 12px;
+    height: 1px;
+    background-color: var(--orange);
+}
+
+.sidebar-dropdown-menu .dropdown-item:hover,
+.sidebar-dropdown-menu .dropdown-item.active {
+    background-color: var(--white-off);
+    color: var(--primary-color);
+}
+
+
+
+.main-contents {
+    margin-left: 300px;
+    margin-top: 64px;
+    height: calc(100dvh - 64px);
+    overflow-y: auto;
+    transition: margin-left .4s linear;
+    padding-bottom: 24px;
+}
+
+.main-contents.active {
+    margin-left: 10px;
+}
+
+
+
+/*
+=========================================
+=====    My Task  Page Start Here   =====
+=========================================
+*/
+
+/* regular-assign-btn */
+.regular-assign-btn {
+    border-radius: 44px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    overflow: hidden;
+}
+
+.regular-assign-btn button {
+    color: var(--dark);
+    padding: 15px 24px;
+    background-color: var(--border-color2);
+}
+
+.regular-assign-btn button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+.regular-assign-btn-border-bottom {
+    border-bottom: 1px solid var(--border-color2);
+}
+
+
+
+/*==========  single task  =========  */
+.single-task {
+    transition: background-color .3s linear;
+}
+
+.single-task:hover {
+    outline: 2px solid var(--before);
+}
+
+/* task profile  */
+.single-task .task-profile-img img {
+    padding: 2px;
+    border: 1px solid var(--border-color2);
+}
+
+.single-task .my-icon-md {
+    width: 50px;
+    height: 50px;
+}
+
+.single-task .tag:hover {
+    background-color: var(--border-color2)
+}
+
+
+/*task details */
+.single-task .right-details {
+    width: calc(100% - 120px);
+}
+
+.single-task .right-details {
+    color: rgb(96, 95, 95);
+}
+
+.single-task .head .right {
+    width: 130px;
+}
+
+
+/*task  Status  */
+.single-task .status {
+    padding: 6px 8px;
+    font-size: var(--fs-xs);
+    text-transform: capitalize;
+}
+
+.single-task .status.completed {
+    background-color: var(--green);
+    color: var(--border-color);
+}
+
+.single-task .status.progress {
+    background-color: #18527c;
+    color: var(--white);
+}
+
+.single-task .status.cancel {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.single-task .status.on-track {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.single-task .status.approve {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.graph canvas {
+    height: 360px !important;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/*
+=====================================
+=====  History Page Start Here  =====
+=====================================
+*/
+.table-area {
+    background-color: var(--white);
+    border-radius: 4px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-area table {
+    width: 100%;
+    min-width: 800px;
+    /* Optional: prevents table from shrinking too much */
+    border-collapse: collapse;
+
+}
+
+
+
+.table-area table th,
+.table-area table td {
+    /* min-width: 86px; */
+    text-align: left;
+    padding: 14px 20px;
+    white-space: nowrap;
+}
+
+.table-area table thead tr {
+    border-bottom: 2px solid var(--border-color2);
+}
+
+.table-area table th {
+    /* border-bottom: 1px solid red; */
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.table-area table td {
+    color: var(--gray);
+}
+
+
+.table-area table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-area table tbody tr:nth-child(odd) {
+    background-color: rgba(241, 199, 199, 0.215)
+}
+
+
+
+
+
+
+
+@media(max-width:1500px) {
+    .product.my-card {
+        box-shadow: unset;
+        cursor: pointer;
+        /* border: none !important; */
+        grid-template-columns: 1fr;
+    }
+
+    .product.my-card img {
+        height: auto;
+    }
+
+    .product h5 {
+        margin: 8px 0;
+    }
+
+
+    .single-task .right-details {
+        width: 100%;
+    }
+}
+
+
+/*
+======================================
+=====   Mobile Responsive  Here  =====
+======================================
+*/
+@media(max-width:991px) {
+    body {
+        min-width: 480px;
+    }
+
+    /*=====  header  =====*/
+    header {
+        padding: 8px 20px;
+    }
+
+    header .mobile-header {
+        display: block;
+    }
+
+    header .mobile-menu-btn {
+        color: var(--text-color);
+    }
+
+    header .logo {
+        width: 200px;
+        align-items: start;
+        justify-content: start;
+    }
+
+    header .page-name {
+        text-align: center;
+    }
+
+
+    /* mobile-header-bottom */
+    .mobile-header-bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: var(--blue);
+        z-index: 4;
+        box-shadow: var(--shadow-2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--white);
+    }
+
+    /*=====  sidebar  =====*/
+    .sidebar {
+        left: -100%;
+        width: 300px;
+        transition: .3s linear;
+        z-index: 12;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /*=====  Main Contents  =====*/
+    .main-contents {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-contents .dashboard {
+        height: unset;
+    }
+
+
+
+
+    /*======  Main Contains  ======*/
+    .main-contents {
+        padding: 16px;
+        padding-bottom: 90px;
+    }
+
+    .home-page.main-contents {
+        padding: 0;
+        padding-bottom: 90px;
+    }
+
+
+    /*======  New order Page  ======*/
+    .new-order {
+        width: 100%;
+    }
+
+    .new-order-area .products-area {
+        width: 100%;
+    }
+
+    /* search-head */
+    .search-head input {
+        width: 300px;
+    }
+
+    .total-bill-area {
+        width: 100%;
+    }
+
+
+    /*======  Order Page =====*/
+    .order-details-area {
+        grid-template-columns: 1fr;
+    }
+
+    .table .table-body li {
+        display: block;
+        border: 1px solid #ddd;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+
+    .products {
+        width: calc(100% - 0px);
+    }
+
+    /* for mobile cart  */
+    .product-select-cart {
+        position: fixed;
+        left: -100%;
+        bottom: 80px;
+        transition: .3s linear;
+    }
+
+    .product-select-cart.active {
+        left: 0;
+    }
+}
