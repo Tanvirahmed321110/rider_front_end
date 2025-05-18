@@ -1093,7 +1093,7 @@ textarea::placeholder {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: var(--text-color);
+    background-color: var(--border-color);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -1304,10 +1304,15 @@ input[type="checkbox"]:focus {
     cursor: pointer;
     font-size: var(--fs-sm);
     width: 100%;
+    font-weight: 500;
 }
 
 .click-dropdown .item:hover {
     background-color: var(--white-off);
+}
+
+.click-dropdown .item.active {
+    background-color: var(--border-color);
 }
 
 .click-dropdown::after {

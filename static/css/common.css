@@ -438,6 +438,10 @@ img {
     padding: 6px 8px;
     font-size: var(--fs-xs);
     text-transform: capitalize;
+    width: fit-content;
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
 }
 
 .single-task .status.completed {
@@ -536,6 +540,16 @@ img {
 
 
 
+/* status-dropdown */
+.status-dropdown .item:hover,
+.status-dropdown .item.active {
+    background-color: var(--sidebar-header-bg);
+    color: var(--white-off);
+}
+
+.edit-view input {
+    border-color: var(--border-color);
+}
 
 
 

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Task</title>
+        <link rel="stylesheet" href="./static/css/common.css">
+    </head>
+
+    <body>
+
+        <!--===================================-->
+        <!--======   Header Start Here   ======-->
+        <!--===================================-->
+        <header>
+            <div class="header-wrapper my-flex-between my-h-100">
+                <div class="my-d-flex my-gap-10 my-flex-between left">
+                    <!--=====  For Logo  =====-->
+                    <div class="logo  ">
+                        <h2 class="my-text-white">Rider.</h2>
+                    </div>
+
+                    <!-- Sidebar Close Button -->
+                    <button class="sidebar-close-btn my-d-md-none btn-ripple" id="sidebar-btn"><i
+                            class="ri-menu-line"></i></button>
+                </div>
+
+
+                <div class="my-flex-between my-w-100">
+                    <!-- page name -->
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">Edit Task</h3>
+
+                    <!-- header right -->
+                    <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
+
+
+                        <!--=====  For Profile  =====-->
+                        <div class="profile click-dropdown-parent">
+                            <img class="my-profile-md dropdown-btn"
+                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                alt="">
+
+                            <!-- Profile  Dropdown -->
+                            <div class="click-dropdown lg">
+                                <ul class="my-has-scrollbar-sm">
+                                    <li class="my-p-4">
+                                        <div class="my-d-flex my-align-center my-gap-4">
+                                            <img class="my-icon-md profile-dropdown-img"
+                                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                                alt="">
+                                            <div>
+                                                <h4>Md Tanvir Ahmed</h4>
+                                                <div class="my-mt-1">tanvir@gmail.com</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-edit-line"></i></span>
+                                        <div class="my-fs-lg"> Edit Profile</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-settings-4-line"></i></span>
+                                        <div class="my-fs-lg"> Setting</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-logout-box-r-line"></i></span>
+                                        <div class="my-fs-lg">Log Out</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--===== For MObile =====-->
+                    <div class="my-d-none mobile-header my-text-right">
+                        <!-- menu button -->
+                        <button class="menu-icon my-fs-xxl mobile-menu-btn" id="mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+
+
+
+                    <!--===== For MObile Header Bottom =====-->
+                    <div class="mobile-header-bottom my-d-none my-px-5">
+
+                        <!-- For cart Button -->
+                        <div class=" my-flex-center my-gap-5 ">
+                            <button id="cart-btn" class="my-btn  my-primary-btn"><i
+                                    class="ri-shopping-cart-line"></i></button>
+                        </div>
+
+                        <!--=====  For Mobile Profile  =====-->
+                        <div class="profile click-dropdown-parent">
+                            <img class="my-profile-md dropdown-btn"
+                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                alt="">
+
+                            <!-- Profile  Dropdown -->
+                            <div class="click-dropdown mobile lg">
+                                <ul class="my-has-scrollbar-sm">
+                                    <li class="my-p-4">
+                                        <div class="my-d-flex my-align-center my-gap-4">
+                                            <img class="my-icon-md profile-dropdown-img"
+                                                src="https://lh3.googleusercontent.com/-owKu1iCCv1U/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkoF57nnKwpNOdtH-5uYsJd1iv1fQ/photo.jpg?sz=46"
+                                                alt="">
+                                            <div>
+                                                <h4>Md Tanvir Ahmed</h4>
+                                                <div class="my-mt-1">tanvir@gmail.com</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-edit-line"></i></span>
+                                        <div class="my-fs-lg"> Edit Profile</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-settings-4-line"></i></span>
+                                        <div class="my-fs-lg"> Setting</div>
+                                    </li>
+                                    <li class="item my-d-flex my-align-center my-gap-3">
+                                        <span class="my-fs-lg my-icon-sm my-bg-border"><i
+                                                class="ri-logout-box-r-line"></i></span>
+                                        <div class="my-fs-lg">Log Out</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=================================-->
+        <!--======   Header End Here   ======-->
+        <!--=================================-->
+
+
+
+        <!--====================================-->
+        <!--======   Sidebar Start Here   ======-->
+        <!--====================================-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-wrapper my-flex-between my-flex-column my-h-100">
+
+
+
+                <!--==============   Sidebar Main Menu Here  ================ -->
+                <ul class="sidebar-menu my-w-100 my-has-scrollbar-sm">
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between  " href="./index.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <div class="icon  my-fs-xxl "><i class="ri-dashboard-line"></i></div>
+                                Dashboard
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between active " href="./sales.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <span><i class="ri-list-check-3"></i></span>
+                                My Task
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between  " href="./history.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <div><i class="ri-group-line"></i></div>
+                                Team Member Tasks
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-main-menu my-flex-between  " href="./history.html">
+                            <div class="my-d-flex my-align-center my-gap-3">
+                                <div><i class="ri-questionnaire-line"></i></div>
+                                About Me
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!--==============   Sidebar Main Menu Bottom  ================ -->
+                <div class="my-w-100 sidebar-bottom">
+                    <div class="my-border-bottom my-p-2  my-fs-sm  my-text-white">Others</div>
+                    <div class="my-flex-column my-flex-between my-gap-2">
+                        <ul class="my-mt-1 my-mt-0 my-w-100">
+                            <li class="sidebar-main-menu my-d-flex my-align-center my-gap-2"><i
+                                    class="ri-settings-3-line"></i>
+                                Setting</li>
+                            <li class="sidebar-main-menu my-d-flex my-gap-2"><i class="ri-logout-box-r-line"></i>
+                                Log Out</li>
+                        </ul>
+                        <div class="my-flex-center my-w-100">
+                            <a target="_blank" href="https://www.xsellencebdltd.com/"
+                                class="my-fs-xs my-p-1 my-text-border my-d-flex my-align-center my-gap-1">
+                                <img class="w-12 my-bg-none" src="./static/images/Logo-Xsellence.png" alt="">
+                                power
+                                by
+                                xsellece</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--=========================================-->
+        <!--======   Main Content Start Here   ======-->
+        <!--=========================================-->
+        <section>
+            <div class="main-contents my-p-6 sale-page my-has-scrollbar-sm" id="main-contents">
+                <div class="my-border-bottom my-pb-5">
+                    <button class="my-btn my-primary-btn btn-ripple my-gap-1"><i class="ri-arrow-left-line"></i>
+                        Back</button>
+                </div>
+
+                <!--==============  Assign Task Edit  ================-->
+                <div class=" ">
+
+                    <div class="my-mt-5">
+                        <div class="my-card">
+
+                            <!-- head -->
+                            <div class="my-flex-between">
+                                <div>
+                                    <h3 class="my-section-title">Edit Task</h3>
+                                </div>
+
+
+
+                                <!--===========  Status Dropdown  ==============-->
+                                <div class="click-dropdown-parent">
+
+                                    <button
+                                        class="dropdown-btn my-fit-content my-btn-sm my-fw-bold my-btn-outline my-btn my-gap-1">
+                                        Status
+                                        <i class="ri-arrow-drop-down-fill"></i>
+                                    </button>
+
+                                    <div class="click-dropdown status-dropdown my-p-2">
+                                        <ul>
+                                            <li class="item active">Completed</li>
+                                            <li class="item">On Progress</li>
+                                            <li class="item">Cancel</li>
+                                            <li class="item">Approve</li>
+                                            <li class="item">On Track</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="my-grid-2 edit-view my-gap-4 my-grid-md-1 my-mt-3">
+                                    <!-- For Task Name -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="task_name" class="my-fw-bold label">Task Name</label>
+                                        <input type="text" id="task_name" class="my-mt-2">
+                                    </div>
+
+
+                                    <!-- For Task Description -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="description" class="my-fw-bold label">Description</label>
+                                        <input type="text" id="description" class="my-mt-2">
+                                    </div>
+
+                                    <!-- For Task Explanation -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="explanation" class="my-fw-bold label">Explanation</label>
+                                        <input type="text" id="explanation" class="my-mt-2">
+                                    </div>
+
+                                    <!-- For Assignee Name -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="task_name" class="my-fw-bold label">Assign Name</label>
+                                        <input type="text" id="task_name" class="my-mt-2">
+                                    </div>
+
+                                    <!-- For Start Date -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="start_date" class="my-fw-bold label">Date Line</label>
+                                        <input type="date" id="start_date" class="my-mt-2">
+                                    </div>
+
+                                    <!-- For Date Line -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="date_line" class="my-fw-bold label">Date Line</label>
+                                        <input type="date" id="date_line" class="my-mt-2">
+                                    </div>
+
+                                    <!-- For Tags -->
+                                    <div class="my-input-control my-bg-after my-border2 my-radius-md my-p-3">
+                                        <label for="date_line" class="my-fw-bold label">Tags</label>
+                                        <input type="text" id="date_line" class="my-mt-2">
+                                    </div>
+                                </div>
+
+                                <!--=====  Save Button  =====-->
+                                <div class="my-mt-4 my-d-flex my-justify-end">
+                                    <button class="my-btn my-primary-btn">Save Task</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=======================================-->
+        <!--======   Main Content End Here   ======-->
+        <!--=======================================-->
+
+
+
+
+
+
+        <!--==================================-->
+        <!--======   Modal Start Here   ======-->
+        <!--==================================-->
+        <div class="my-modal " id="edit-task">
+            <div class="modal-content ">
+                <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
+                <div class="">
+                    <div class="header">
+                        hader here
+                    </div>
+
+                    <div class="modal-body my-p-5">body</div>
+
+                    <div class="footer">Footer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- overlay -->
+        <div class="modal-overlay"></div>
+
+
+
+
+
+        <script src="./static/js/main.js"></script>
+
+    </body>
+
+</html>

@@ -642,6 +642,10 @@ tr {
 
 
 /*______  Bg Color ______ */
+.my-bg-none {
+    background-color: transparent;
+}
+
 .my-bg-white {
     background-color: var(--white);
 }
