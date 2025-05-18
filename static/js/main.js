@@ -178,7 +178,7 @@ function closeButtonF() {
     });
 }
 
-
+closeButtonF()
 
 
 

@@ -58,9 +58,6 @@ new Chart(ctx, {
 
 
 
-
-
-
 // complete and uncomple task
 const regularCahrt = document.getElementById('regularChart').getContext('2d');
 new Chart(regularCahrt, {
@@ -78,6 +75,8 @@ new Chart(regularCahrt, {
         responsive: true
     }
 });
+
+
 
 // complete and uncomple task
 const assignCahrt = document.getElementById('assignChart').getContext('2d');
