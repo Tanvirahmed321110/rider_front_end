@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit Task</title>
+        <title>Dashboard</title>
         <link rel="stylesheet" href="./static/css/common.css">
     </head>
 
@@ -29,7 +29,7 @@
 
                 <div class="my-flex-between my-w-100">
                     <!-- page name -->
-                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">View Task</h3>
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">Dashboard</h3>
 
                     <!-- header right -->
                     <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
@@ -160,7 +160,7 @@
                 <!--==============   Sidebar Main Menu Here  ================ -->
                 <ul class="sidebar-menu my-w-100 my-has-scrollbar-sm">
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  " href="./index.html">
+                        <a class="sidebar-main-menu my-flex-between  active" href="./index.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <div class="icon  my-fs-xxl "><i class="ri-dashboard-line"></i></div>
                                 Dashboard
@@ -168,7 +168,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between active " href="./sales.html">
+                        <a class="sidebar-main-menu my-flex-between  " href="./my_task.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <span><i class="ri-list-check-3"></i></span>
                                 My Task
@@ -176,7 +176,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  " href="./history.html">
+                        <a class="sidebar-main-menu my-flex-between  " href="./team_member_task.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <div><i class="ri-group-line"></i></div>
                                 Team Member Tasks
@@ -184,7 +184,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  " href="./history.html">
+                        <a class="sidebar-main-menu my-flex-between  " href="./about.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <div><i class="ri-questionnaire-line"></i></div>
                                 About Me
@@ -227,101 +227,30 @@
         <!--=========================================-->
         <section>
             <div class="main-contents my-p-6 sale-page my-has-scrollbar-sm" id="main-contents">
-                <div class="my-border-bottom my-pb-5">
-                    <button class="my-btn my-primary-btn btn-ripple my-gap-1"><i class="ri-arrow-left-line"></i>
-                        Back</button>
-                </div>
 
-                <!--==============  Assign Task Edit  ================-->
-                <div class=" ">
+                <div class="my-grid-2 pye-chart my-gap-6 my-grid-md-1">
+                    <!-- for regular task -->
+                    <div class="my-card">
+                        <h3 class="my-section-title  my-pb-4">Regular Task</h3>
+                        <canvas id="regularChart"></canvas>
+                    </div>
 
-                    <div class="my-mt-5">
-                        <div class="my-card">
-
-                            <!-- head -->
-                            <div class="my-flex-between">
-                                <div>
-                                    <h3 class="my-section-title">Task View</h3>
-                                </div>
-
-
-
-                                <!--===========  Status Dropdown  ==============-->
-                                <div class="click-dropdown-parent">
-
-                                    <button
-                                        class="dropdown-btn my-fit-content my-btn-sm my-fw-bold my-btn-outline my-btn my-gap-1">
-                                        Status
-                                        <i class="ri-arrow-drop-down-fill"></i>
-                                    </button>
-
-                                    <div class="click-dropdown status-dropdown my-p-2">
-                                        <ul>
-                                            <li class="item active">Completed</li>
-                                            <li class="item">On Progress</li>
-                                            <li class="item">Cancel</li>
-                                            <li class="item">Approve</li>
-                                            <li class="item">On Track</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="my-grid-2 edit-view my-gap-4 my-grid-md-1 my-mt-3">
-                                    <!-- For Task Name -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="task_name" class="my-fw-bold label">Task Name</label>
-                                        <input type="text" id="task_name" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Assignee Name -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="task_name" class="my-fw-bold label">Assign Name</label>
-                                        <input type="text" id="task_name" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Tags -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="date_line" class="my-fw-bold label">Tags</label>
-                                        <input type="text" id="date_line" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Task Explanation -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="explanation" class="my-fw-bold label">Explanation</label>
-                                        <input type="text" id="explanation" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Start Date -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="start_date" class="my-fw-bold label">Date Line</label>
-                                        <input type="date" id="start_date" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Date Line -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="date_line" class="my-fw-bold label">Date Line</label>
-                                        <input type="date" id="date_line" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Date Line -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="today_update" class="my-fw-bold label">Today's Update</label>
-                                        <input type="text" id="today_update" class="my-mt-2">
-                                    </div>
-
-
-                                    <!-- For Task Description -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="description" class="my-fw-bold label">Description</label>
-                                        <input type="text" id="description" class="my-mt-2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- for assign task -->
+                    <div class="my-card">
+                        <h3 class="my-section-title my-pb-4">Assign Task</h3>
+                        <canvas id="assignChart"></canvas>
                     </div>
                 </div>
+
+                <!-- for deadline chart -->
+                <div class="my-mt-6">
+                    <div class="my-card nearest-deadline">
+                        <div class="my-section-title my-pb-4">Nearest Deadline</div>
+                        <canvas id="nearDeadline"></canvas>
+                    </div>
+                </div>
+
+
             </div>
         </section>
         <!--=======================================-->
@@ -333,15 +262,15 @@
 
 
 
-        <!--==================================-->
-        <!--======   Modal Start Here   ======-->
-        <!--==================================-->
-        <div class="my-modal " id="edit-task">
+        <!--==================================================-->
+        <!--====== Assign Tasks Edit Modal Start Here   ======-->
+        <!--==================================================-->
+        <div class="my-modal " id="new-modal">
             <div class="modal-content ">
                 <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
                 <div class="">
-                    <div class="header">
-                        hader here
+                    <div class="header my-bg-border my-p-4">
+                        <h3 class="my-mt-2">Edit Task</h3>
                     </div>
 
                     <div class="modal-body my-p-5">body</div>
@@ -352,13 +281,14 @@
         </div>
 
         <!-- overlay -->
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay "></div>
 
 
 
-
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="./static/js/main.js"></script>
+        <script src="./static/js/index.js"></script>
+
 
     </body>
 

@@ -353,6 +353,10 @@ img {
 
 
 
+
+
+
+
 /*
 =========================================
 =====    My Task  Page Start Here   =====
@@ -455,17 +459,17 @@ img {
 }
 
 .single-task .status.cancel {
-    background-color: var(--red);
+    background-color: red;
     color: var(--white);
 }
 
-.single-task .status.on-track {
+.single-task .status.change-request {
     background-color: var(--orange);
     color: var(--white);
 }
 
 .single-task .status.approve {
-    background-color: var(--primary-color);
+    background-color: green;
     color: var(--white);
 }
 
@@ -540,6 +544,16 @@ img {
 
 
 
+
+
+
+
+
+/*
+================================================
+=====  Task view and Edit page Start Here  =====
+================================================
+*/
 /* status-dropdown */
 .status-dropdown .item:hover,
 .status-dropdown .item.active {
@@ -549,9 +563,16 @@ img {
 
 .edit-view input {
     border-color: var(--border-color);
+    background-color: transparent !important;
 }
 
+.pye-chart canvas {
+    max-height: 360px;
+}
 
+.nearest-deadline canvas {
+    max-height: 500px;
+}
 
 
 @media(max-width:1500px) {

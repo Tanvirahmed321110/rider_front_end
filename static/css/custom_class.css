@@ -698,6 +698,14 @@ tr {
     background-color: var(--border-color);
 }
 
+.my-bg-after {
+    background-color: var(--after);
+}
+
+.my-bg-before {
+    background-color: var(--before);
+}
+
 
 
 /* text hover */
