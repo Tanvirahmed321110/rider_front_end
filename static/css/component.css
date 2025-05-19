@@ -1017,8 +1017,9 @@ textarea::placeholder {
     position: relative;
 }
 
+/* dropdown */
 .multiple-or-single-select .dropdown {
-    padding: 12px;
+    padding: 12px 8px;
     top: 60px;
     left: 0;
     min-width: 222px;
@@ -1027,19 +1028,60 @@ textarea::placeholder {
     z-index: 12;
     box-shadow: var(--shadow-2);
     border: 1px solid var(--border-color);
-    border-radius: 2px;
+    display: none;
 }
 
+/* add active class */
+.multiple-or-single-select .dropdown.active {
+    display: block;
+}
+
+
+/* single item */
 .multiple-or-single-select .dropdown .item {
     padding: 8px 12px;
     font-weight: var(--fw-500);
     cursor: pointer;
     border-radius: 2px;
+    margin-top: 1px;
 }
 
+.multiple-or-single-select .dropdown .item {
+    width: 100%;
+}
+
+/* active and hover */
 .multiple-or-single-select .dropdown .item:hover,
 .multiple-or-single-select .dropdown .item.active {
     background-color: var(--border-color);
+}
+
+
+/* Tags container styling */
+.multiple-or-single-select .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 0 0;
+    min-height: 28px;
+}
+
+/* Tag style */
+.multiple-or-single-select .tag {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* Close button on tag */
+.multiple-or-single-select .tag .close-btn {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 

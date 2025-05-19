@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Team Member Task</title>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="./static/css/common.css">
     </head>
 
@@ -1217,7 +1218,7 @@
         <!--==================================================-->
         <!--====== Assign Tasks Edit Modal Start Here   ======-->
         <!--==================================================-->
-        <div class="my-modal active" id="add-modal">
+        <div class="my-modal" id="add-modal">
             <div class="modal-content ">
                 <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
                 <div class="">
@@ -1227,32 +1228,35 @@
 
                     <div class="modal-body my-p-5">
                         <div>
-                            <form action="" class="edit-view my-flex-column my-gap-2 my-mt-4">
+                            <form action="" class="edit-view my-flex-column my-gap-4 my-mt-4">
                                 <div class="my-input-control my-p-3 my-border2 my-radius-md">
                                     <label for="" class="label my-fw-bold">Task Name</label>
                                     <input type="text">
                                 </div>
 
-                                <!-- supervisor name  -->
-                                <div class="multiple-or-single-select ">
-                                    <div class="my-input-control my-p-3 my-border2 my-radius-md">
-                                        <label for="" class="label my-fw-bold">Supervisor</label>
-                                        <input type="text">
 
-                                        <div class="dropdown ">
-                                            <ul>
-                                                <li class="item">tanvir </li>
-                                                <li class="item">rustom </li>
-                                                <li class="item">hasan</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="my-border2 my-radius-md my-p-3">
+                                    <div class="my-fw-bold my-pb-1">Supervisor</div>
+                                    <select class="js-example-basic-single my-w-100" style="width: 100%;" name="
+                                        state">
+                                        <option value="AL">Name 1</option>
+                                        <option value="AL">Name 2</option>
+                                        <option value="AL">Name 3</option>
+                                        <option value="AL">Name 4</option>
+                                    </select>
                                 </div>
 
-                                <!-- supervisor name -->
-                                <div class="my-input-control my-p-3 my-border2 my-radius-md">
-                                    <label for="" class="label my-fw-bold">Assignee</label>
-                                    <input type="text">
+                                <div class="my-border2 my-radius-md my-p-3">
+                                    <div class="my-fw-bold my-pb-1">Assignee</div>
+                                    <!-- supervisor name  -->
+                                    <select class="js-example-basic-multiple my-w-100" name=" states[]"
+                                        style="width: 100%;" multiple="multiple">
+                                        <option value="AL">Hasan</option>
+                                        <option value="AL">Dhaka</option>
+                                        <option value="AL">Tanvir</option>
+
+                                        <option value="WY">Foysal</option>
+                                    </select>
                                 </div>
                             </form>
                         </div>
@@ -1266,13 +1270,14 @@
         </div>
 
         <!-- overlay -->
-        <div class="modal-overlay "></div>
+        <div class="modal-overlay"></div>
 
 
-
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="./static/js/main.js"></script>
-        <script src="./static/js/my_task.js"></script>
+        <script src="./static/js/my_team_task.js"></script>
+
 
 
     </body>

@@ -184,6 +184,108 @@ closeButtonF()
 
 
 
+// function initSingleSelect(wrapperSelector, isMultiple) {
+//     const select = document.querySelector(wrapperSelector);
+//     if (!select) return;
+
+//     const input = select.querySelector(".multiple-or-single-select-btn");
+//     const dropdown = select.querySelector(".dropdown");
+//     const items = Array.from(dropdown.querySelectorAll(".item"));
+//     const selectedItems = new Set(); // For multiple mode
+
+//     // Toggle dropdown on input click
+//     input.addEventListener("click", function (e) {
+//         e.stopPropagation();
+//         dropdown.classList.add("active");
+//         filterItems(""); // Show all
+//     });
+
+//     // Filter and update active state when typing
+//     input.addEventListener("input", function () {
+//         const query = this.value.trim().toLowerCase();
+//         filterItems(query);
+
+//         if (isMultiple) {
+//             const currentValues = input.value
+//                 .split(",")
+//                 .map(s => s.trim())
+//                 .filter(Boolean);
+
+//             selectedItems.clear();
+//             currentValues.forEach(val => selectedItems.add(val));
+
+//             items.forEach(item => {
+//                 const text = item.textContent.trim();
+//                 if (selectedItems.has(text)) {
+//                     item.classList.add("active");
+//                 } else {
+//                     item.classList.remove("active");
+//                 }
+//             });
+//         } else {
+//             // For single select: if input is cleared, remove all active
+//             if (input.value.trim() === "") {
+//                 items.forEach(i => i.classList.remove("active"));
+//             }
+//         }
+//     });
+
+//     // Handle item selection
+//     items.forEach(item => {
+//         item.addEventListener("click", function () {
+//             const text = this.textContent.trim();
+
+//             if (isMultiple) {
+//                 this.classList.toggle("active");
+
+//                 if (this.classList.contains("active")) {
+//                     selectedItems.add(text);
+//                 } else {
+//                     selectedItems.delete(text);
+//                 }
+
+//                 input.value = Array.from(selectedItems).join(", ");
+//             } else {
+//                 items.forEach(i => i.classList.remove("active"));
+//                 this.classList.add("active");
+//                 input.value = text;
+//                 dropdown.classList.remove("active");
+//             }
+//         });
+//     });
+
+//     // Close dropdown on outside click
+//     document.addEventListener("click", function (e) {
+//         if (!select.contains(e.target)) {
+//             dropdown.classList.remove("active");
+//         }
+//     });
+
+//     // Filter visible items (without affecting dropdown visibility)
+//     function filterItems(query) {
+//         items.forEach(item => {
+//             const match = item.textContent.toLowerCase().includes(query);
+//             item.style.display = match ? "block" : "none";
+//         });
+//     }
+// }
+
+
+// // For single select:
+// initSingleSelect('.supervisor-single-select', true);
+
+
+
+$(document).ready(function () {
+    $('.js-example-basic-multiple').select2();
+});
+
+$(document).ready(function () {
+    $('.js-example-basic-single').select2();
+});
+
+
+
 
 
 

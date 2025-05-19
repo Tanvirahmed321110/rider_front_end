@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Select2 Example</title>
+
+        <!-- Select2 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <!-- jQuery (required) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Select2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    </head>
+
+    <body>
+
+        <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 300px;">
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+            <option value="TX">Texas</option>
+        </select>
+
+        <script>
+            $(document).ready(function () {
+                $('.js-example-basic-multiple').select2({
+                    placeholder: "Select states",
+                    allowClear: true
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
