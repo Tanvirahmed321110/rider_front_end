@@ -561,7 +561,8 @@ img {
     color: var(--white-off);
 }
 
-.edit-view input {
+.edit-view input,
+.edit-view textarea {
     border-color: var(--border-color);
     background-color: transparent !important;
 }

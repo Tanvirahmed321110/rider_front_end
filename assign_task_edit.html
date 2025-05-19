@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit Task</title>
+        <title>Assign Edit Task</title>
         <link rel="stylesheet" href="./static/css/common.css">
     </head>
 
@@ -29,7 +29,7 @@
 
                 <div class="my-flex-between my-w-100">
                     <!-- page name -->
-                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">View Task</h3>
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">Edit Task</h3>
 
                     <!-- header right -->
                     <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
@@ -241,7 +241,7 @@
                             <!-- head -->
                             <div class="my-flex-between">
                                 <div>
-                                    <h3 class="my-section-title">Task View</h3>
+                                    <h3 class="my-section-title">Edit Task</h3>
                                 </div>
 
 
@@ -268,56 +268,132 @@
                             </div>
 
                             <div>
-                                <div class="my-grid-2 edit-view my-gap-4 my-grid-md-1 my-mt-3">
-                                    <!-- For Task Name -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="task_name" class="my-fw-bold label">Task Name</label>
-                                        <input type="text" id="task_name" class="my-mt-2">
+                                <div class="my-flex-column  edit-view my-gap-4  my-mt-3">
+
+                                    <div class="my-grid-2 my-grid-md-1 my-gap-4">
+                                        <!-- For Task Name -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="task_name" class="my-fw-bold label">Task Name</label>
+                                            <input type="text" id="task_name" class="my-mt-2">
+                                        </div>
+
+                                        <!-- For Assignee Name -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="task_name" class="my-fw-bold label">Assign Name</label>
+                                            <input type="text" id="task_name" class="my-mt-2">
+                                        </div>
                                     </div>
 
-                                    <!-- For Assignee Name -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="task_name" class="my-fw-bold label">Assign Name</label>
-                                        <input type="text" id="task_name" class="my-mt-2">
+                                    <div class="my-grid-2 my-grid-md-1 my-gap-4">
+                                        <!-- For Tags -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="date_line" class="my-fw-bold label">Tags</label>
+                                            <input type="text" id="date_line" class="my-mt-2">
+                                        </div>
+
+                                        <!-- For Task Explanation -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="explanation" class="my-fw-bold label">Explanation</label>
+                                            <input type="text" id="explanation" class="my-mt-2">
+                                        </div>
                                     </div>
 
-                                    <!-- For Tags -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="date_line" class="my-fw-bold label">Tags</label>
-                                        <input type="text" id="date_line" class="my-mt-2">
+                                    <div class="my-gap-4 my-grid-2 my-grid-md-1">
+                                        <!-- For Start Date -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="start_date" class="my-fw-bold label">Start Date</label>
+                                            <input type="date" id="start_date" class="my-mt-2">
+                                        </div>
+
+                                        <!-- For Date Line -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="date_line" class="my-fw-bold label">Date Line</label>
+                                            <input type="date" id="date_line" class="my-mt-2">
+                                        </div>
                                     </div>
 
-                                    <!-- For Task Explanation -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="explanation" class="my-fw-bold label">Explanation</label>
-                                        <input type="text" id="explanation" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Start Date -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="start_date" class="my-fw-bold label">Date Line</label>
-                                        <input type="date" id="start_date" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Date Line -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="date_line" class="my-fw-bold label">Date Line</label>
-                                        <input type="date" id="date_line" class="my-mt-2">
-                                    </div>
-
-                                    <!-- For Date Line -->
-                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="today_update" class="my-fw-bold label">Today's Update</label>
-                                        <input type="text" id="today_update" class="my-mt-2">
+                                    <div class="my-grid-2 my-grid-md-1 my-gap-4">
+                                        <!-- For Date Line -->
+                                        <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                            <label for="today_update" class="my-fw-bold label">Today's Update</label>
+                                            <input type="text" id="today_update" class="my-mt-2">
+                                        </div>
                                     </div>
 
 
                                     <!-- For Task Description -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="description" class="my-fw-bold label">Description</label>
-                                        <input type="text" id="description" class="my-mt-2">
+                                        <textarea type="text" id="description" class="my-mt-2"> </textarea>
                                     </div>
                                 </div>
+
+                                <!--=====  Save Button  =====-->
+                                <div class="my-mt-4 my-d-flex my-justify-end">
+                                    <button class="my-btn my-primary-btn">Save Task</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--=================== Task Log  ====================-->
+                        <div class="my-card my-mt-5">
+                            <h3 class="my-section-title">Task Log</h3>
+                            <div class=" my-mt-4">
+                                <!--=====  show log details items  =====-->
+                                <div class="my-border2 my-flex-column my-gap-3 my-radius-md my-p-4">
+
+                                    <!-- single task log -->
+                                    <div class="single-task-log  my-bg-before my-p-4 my-radius-md">
+                                        <div class="my-d-flex my-align-center my-gap-3">
+                                            <h5 class="my-text-white my-fw-bolder">Admin 1</h5>
+                                            <div class="my-fs-xs my-text-white">( <span>date and time show here</span>
+                                                )
+                                            </div>
+                                        </div>
+                                        <div class="log-message my-mt-1 my-text-white">
+                                            <p>A new task has been created in the "Exhibition - 2025" project.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- single task log -->
+                                    <div class="single-task-log  my-bg-before my-p-4 my-radius-md">
+                                        <div class="my-d-flex my-align-center my-gap-3">
+                                            <h5 class="my-text-white my-fw-bolder">Admin 11</h5>
+                                            <div class="my-fs-xs my-text-white">( <span>date and time show here</span>
+                                                )
+                                            </div>
+                                        </div>
+                                        <div class="log-message my-mt-1 my-text-white">
+                                            <p>been created in the "Exhibition - 2025" project.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- single task log -->
+                                    <div class="single-task-log  my-bg-before my-p-4 my-radius-md">
+                                        <div class="my-d-flex my-align-center my-gap-3">
+                                            <h5 class="my-text-white my-fw-bolder">Admin 3</h5>
+                                            <div class="my-fs-xs my-text-white">( <span>date and time show here</span>
+                                                )
+                                            </div>
+                                        </div>
+                                        <div class="log-message my-mt-1 my-text-white">
+                                            <p>- 2025" project.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--=====  Create Log  =====-->
+                                <form action="#" class="my-border2 my-mt-5 my-radius-md my-p-4">
+                                    <div class="my-input-control">
+                                        <textarea class="my-border" name="" id=""
+                                            placeholder="wirte your note..."></textarea>
+                                    </div>
+
+                                    <div class="my-mt-3">
+                                        <button class="my-btn my-primary-btn btn-ripple">Send Log Note</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

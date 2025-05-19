@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit Task</title>
+        <title>Assign Task View</title>
         <link rel="stylesheet" href="./static/css/common.css">
     </head>
 
@@ -29,7 +29,7 @@
 
                 <div class="my-flex-between my-w-100">
                     <!-- page name -->
-                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">Edit Task</h3>
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">View Task</h3>
 
                     <!-- header right -->
                     <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
@@ -241,7 +241,7 @@
                             <!-- head -->
                             <div class="my-flex-between">
                                 <div>
-                                    <h3 class="my-section-title">Edit Task</h3>
+                                    <h3 class="my-section-title">Task View</h3>
                                 </div>
 
 
@@ -267,8 +267,8 @@
                                 </div>
                             </div>
 
-                            <div>
-                                <div class="my-grid-2 edit-view my-gap-4 my-grid-md-1 my-mt-3">
+                            <div class=" edit-view my-gap-4 my-flex-column my-mt-3">
+                                <div class="my-grid-2 my-grid-md-1 my-gap-4">
                                     <!-- For Task Name -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="task_name" class="my-fw-bold label">Task Name</label>
@@ -280,7 +280,9 @@
                                         <label for="task_name" class="my-fw-bold label">Assign Name</label>
                                         <input type="text" id="task_name" class="my-mt-2">
                                     </div>
+                                </div>
 
+                                <div class="my-grid-2 my-grid-md-1 my-gap-4">
                                     <!-- For Tags -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="date_line" class="my-fw-bold label">Tags</label>
@@ -292,7 +294,9 @@
                                         <label for="explanation" class="my-fw-bold label">Explanation</label>
                                         <input type="text" id="explanation" class="my-mt-2">
                                     </div>
+                                </div>
 
+                                <div class="my-grid-2 my-grid-md-1 my-gap-4">
                                     <!-- For Start Date -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="start_date" class="my-fw-bold label">Date Line</label>
@@ -304,25 +308,33 @@
                                         <label for="date_line" class="my-fw-bold label">Date Line</label>
                                         <input type="date" id="date_line" class="my-mt-2">
                                     </div>
+                                </div>
 
-                                    <!-- For Date Line -->
+
+                                <div class="my-grid-2 my-gap-4 ">
+                                    <!-- For Today Update -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="today_update" class="my-fw-bold label">Today's Update</label>
                                         <input type="text" id="today_update" class="my-mt-2">
                                     </div>
 
+                                    <!-- For Super Visor -->
+                                    <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                        <label for="supder_visor" class="my-fw-bold label">Super Visor</label>
+                                        <input type="text" id="supder_visor" class="my-mt-2">
+                                    </div>
 
+                                </div>
+
+
+                                <div class="my-grid-1 my-grid-md-1">
                                     <!-- For Task Description -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="description" class="my-fw-bold label">Description</label>
-                                        <input type="text" id="description" class="my-mt-2">
+                                        <textarea type="text" id="description" class="my-mt-2 "> </textarea>
                                     </div>
                                 </div>
 
-                                <!--=====  Save Button  =====-->
-                                <div class="my-mt-4 my-d-flex my-justify-end">
-                                    <button class="my-btn my-primary-btn">Save Task</button>
-                                </div>
                             </div>
                         </div>
                     </div>

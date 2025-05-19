@@ -243,15 +243,17 @@
                                 </div>
 
                                 <div class="my-flex-center my-gap-4">
-                                    <button id="about-contact-modal-open" class="my-btn my-primary-btn">Contact</button>
+                                    <button id="about-contact-modal-open"
+                                        class="my-btn my-primary-btn btn-ripple">Contact</button>
                                     <button id="private-infromation-modal-open"
-                                        class="my-btn my-bg-border my-border2">Private Info</button>
+                                        class="my-btn my-bg-border my-border2 btn-ripple">Private Info</button>
                                 </div>
                             </div>
                         </div>
 
+
                         <!--============  for right side skill  ===============-->
-                        <div class="my-card my-p-6">
+                        <div class="my-card card-md">
                             <div>
                                 <h4 class="my-fw-bolder my-fs-xl">Skills:</h4>
 
@@ -331,7 +333,7 @@
 
                     <!--=====================    Work Information    ==========================-->
                     <div>
-                        <div class="my-card my-p-6 my-mt-4">
+                        <div class="my-card card-md my-mt-4">
                             <h3 class=" my-fw-bolder ">Work Information:</h3>
                             <ul class=" my-mt-4 my-p-md-0 my-grid-2 my-grid-md-1 my-gap-3">
                                 <li class="my-d-flex my-align-center my-gap-1">
@@ -517,9 +519,9 @@
         </div>
 
 
-        <!--==============================================-->
-        <!--====== Abut Contact  Modal Start Here   ======-->
-        <!--==============================================-->
+        <!--==================================================================-->
+        <!--====== Abut Contact Private Information  Modal Start Here   ======-->
+        <!--==================================================================-->
         <div class="my-modal " id="about-private-information-modal">
             <div class="modal-content modal-content lg ">
                 <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
@@ -530,7 +532,8 @@
 
                     <div class="modal-body my-has-scrollbar-sm my-p-5">
 
-                        <button class="my-btn my-primary-btn my-btn-sm my-gap-1"><i class="ri-edit-2-line"></i>
+                        <button class="my-btn my-primary-btn my-btn-sm my-gap-1 btn-ripple"
+                            id="edit-private-modal-open"><i class="ri-edit-2-line"></i>
                             Edit</button>
 
                         <div class="my-grid-2 my-mt-5 my-gap-5 my-grid-md-1">
@@ -770,6 +773,149 @@
                     </div>
 
                     <div class="footer my-border-top"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--==========================================================-->
+        <!--====== Private Information Edit  Modal Start Here   ======-->
+        <!--==========================================================-->
+        <div class="my-modal " id="private-information-edit-modal">
+            <div class="modal-content modal-content lg ">
+                <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
+                <div class="">
+                    <div class="header my-bg-border my-border-bottom my-p-4">
+                        <h3 class="my-mt-2 my-fw-bolder">Private Information</h3>
+                    </div>
+
+                    <div class="modal-body my-has-scrollbar-sm my-p-5">
+                        <div>
+                            <div class="my-grid-2 edit-view my-gap-4 my-grid-md-1 my-mt-3">
+                                <!-- For Task Name -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="task_name" class="my-fw-bold label">Task Name</label>
+                                    <input type="text" id="task_name" class="my-mt-2">
+                                </div>
+
+                                <!-- For Assignee Name -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="task_name" class="my-fw-bold label">Assign Name</label>
+                                    <input type="text" id="task_name" class="my-mt-2">
+                                </div>
+
+                                <!-- For Tags -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="date_line" class="my-fw-bold label">Tags</label>
+                                    <input type="text" id="date_line" class="my-mt-2">
+                                </div>
+
+                                <!-- For Task Explanation -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="explanation" class="my-fw-bold label">Explanation</label>
+                                    <input type="text" id="explanation" class="my-mt-2">
+                                </div>
+
+                                <!-- For Start Date -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="start_date" class="my-fw-bold label">Date Line</label>
+                                    <input type="date" id="start_date" class="my-mt-2">
+                                </div>
+
+                                <!-- For Date Line -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="date_line" class="my-fw-bold label">Date Line</label>
+                                    <input type="date" id="date_line" class="my-mt-2">
+                                </div>
+
+                                <!-- For Date Line -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="today_update" class="my-fw-bold label">Today's Update</label>
+                                    <input type="text" id="today_update" class="my-mt-2">
+                                </div>
+
+
+                                <!-- For Task Description -->
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label for="description" class="my-fw-bold label">Description</label>
+                                    <input type="text" id="description" class="my-mt-2">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for="dob">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label for=" address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" marital-status">Marital Status</label>
+                                    <input type="text" class="form-control" id="marital-status" name="marital-status">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" dependent-children">Number of Dependent
+                                        Children</label>
+                                    <input type="number" class="form-control" id="dependent-children"
+                                        name="dependent-children">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" passport-number">Passport Number</label>
+                                    <input type="text" class="form-control" id="passport-number" name="passport-number">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" work-permit-no">Work Permit No</label>
+                                    <input type="text" class="form-control" id="work-permit-no" name="work-permit-no">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for="bank-account">Bank Account</label>
+                                    <input type="text" class="form-control" id="bank-account" name="bank-account">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" identification-no">Identification No</label>
+                                    <input type="text" class="form-control" id="identification-no"
+                                        name="identification-no">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" visa-no">Visa No</label>
+                                    <input type="text" class="form-control" id="visa-no" name="visa-no">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" work-permit-exp">Work Permit Expiration
+                                        Date</label>
+                                    <input type="date" class="form-control" id="work-permit-exp" name="work-permit-exp">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" visa-exp">Visa Expiration Date</label>
+                                    <input type="date" class="form-control" id="visa-exp" name="visa-exp">
+                                </div>
+
+                                <div class="my-input-control  my-border2 my-radius-md my-p-3">
+                                    <label class="my-fw-bold label" for=" nationality">Nationality (Country)</label>
+                                    <input type="text" class="form-control" id="nationality" name="nationality">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="footer my-border-top">
+                        <!--=====  Save Button  =====-->
+                        <div class="my-mt-4 my-d-flex my-justify-end">
+                            <button class="my-btn my-primary-btn">Save Information</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
