@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
+        <title>My Team Member Task</title>
         <link rel="stylesheet" href="./static/css/common.css">
     </head>
 
@@ -168,7 +168,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  active" href="./my_task.html">
+                        <a class="sidebar-main-menu my-flex-between  " href="./my_task.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <span><i class="ri-list-check-3"></i></span>
                                 My Task
@@ -176,7 +176,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar-main-menu my-flex-between  " href="./team_member_task.html">
+                        <a class="sidebar-main-menu my-flex-between  active" href="./team_member_task.html">
                             <div class="my-d-flex my-align-center my-gap-3">
                                 <div><i class="ri-group-line"></i></div>
                                 Team Member Tasks
@@ -226,7 +226,7 @@
         <!--======   Main Content Start Here   ======-->
         <!--=========================================-->
         <section>
-            <div class="main-contents my-p-6  my-has-scrollbar-sm" id="main-contents">
+            <div class="main-contents my-p-6  my-has-scrollbar" id="main-contents">
                 <div>
 
                     <div class="my-flex-between">
@@ -234,6 +234,13 @@
                         <div class="regular-assign-btn">
                             <button class="active btn-ripple tab" data-tab="regular_task">Regular Task</button>
                             <button class="btn-ripple tab" data-tab="assign_task">Assign Task</button>
+                        </div>
+
+                        <!-- Add Task -->
+                        <div>
+                            <button id="add-modal-open" class="my-btn my-primary-btn btn-ripple my-gap-2">Add <span
+                                    class="my-fs-lg">+</span>
+                            </button>
                         </div>
                     </div>
 
@@ -327,12 +334,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
                                 </div>
 
@@ -416,12 +427,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
 
                                 </div>
@@ -506,12 +521,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
                                 </div>
 
@@ -596,12 +615,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
 
                                 </div>
@@ -685,12 +708,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
 
                                 </div>
@@ -776,12 +803,16 @@
                                         </div>
                                     </div>
 
-                                    <!--  view Button -->
+                                    <!-- Edit and view Button -->
                                     <div class="my-mt-6 my-flex-between">
-                                        <a href="./regular_task_view.html"
+                                        <a href="assign_task_view.html"
                                             class="my-btn my-btn-sm my-primary-btn my-bg-secondary my-gap-1">
                                             <i class="ri-eye-line"></i> View
                                         </a>
+                                        <a href="./assign_task_edit.html"
+                                            class="my-btn my-gap-1 my-btn-sm my-primary-btn"><i
+                                                class="ri-edit-line"></i>
+                                            Edit</a>
                                     </div>
 
                                 </div>
@@ -1186,17 +1217,50 @@
         <!--==================================================-->
         <!--====== Assign Tasks Edit Modal Start Here   ======-->
         <!--==================================================-->
-        <div class="my-modal " id="new-modal">
+        <div class="my-modal active" id="add-modal">
             <div class="modal-content ">
                 <button class="my-btn modal-close-btn"><i class="ri-close-line"></i></button>
                 <div class="">
                     <div class="header my-bg-border my-p-4">
-                        <h3 class="my-mt-2">Edit Task</h3>
+                        <h3 class="my-mt-2">Add </h3>
                     </div>
 
-                    <div class="modal-body my-p-5">body</div>
+                    <div class="modal-body my-p-5">
+                        <div>
+                            <form action="" class="edit-view my-flex-column my-gap-2 my-mt-4">
+                                <div class="my-input-control my-p-3 my-border2 my-radius-md">
+                                    <label for="" class="label my-fw-bold">Task Name</label>
+                                    <input type="text">
+                                </div>
 
-                    <div class="footer">Footer</div>
+                                <!-- supervisor name  -->
+                                <div class="multiple-or-single-select ">
+                                    <div class="my-input-control my-p-3 my-border2 my-radius-md">
+                                        <label for="" class="label my-fw-bold">Supervisor</label>
+                                        <input type="text">
+
+                                        <div class="dropdown ">
+                                            <ul>
+                                                <li class="item">tanvir </li>
+                                                <li class="item">rustom </li>
+                                                <li class="item">hasan</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- supervisor name -->
+                                <div class="my-input-control my-p-3 my-border2 my-radius-md">
+                                    <label for="" class="label my-fw-bold">Assignee</label>
+                                    <input type="text">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="footer my-d-flex my-justify-end">
+                        <button class="my-btn my-primary-btn">Save</button>
+                    </div>
                 </div>
             </div>
         </div>

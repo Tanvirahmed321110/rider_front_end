@@ -24,11 +24,11 @@ const ctx = document.getElementById('nearDeadline').getContext('2d');
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Task one', 'Task Nine', 'Task Four', 'Task Six', 'Task Five', 'Management Task', 'Team Task'],
+        labels: ['Task one', 'Task Nine', 'Task Four', 'Task Six', 'Task Five', 'Management Task', 'Team Task', 'test', 'test'],
         datasets: [{
             label: 'Days Until Deadline',
-            data: [2, 5, 2, 3, 6, 5, 9], // Number of days left for each task
-            backgroundColor: '#F44336', // red bars
+            data: [2, 5, 2, 3, 6, 5, 9, 5, 7], // Number of days left for each task
+            backgroundColor: '#256fd1ca', // red bars
             maxBarThickness: 60
         }]
     },
@@ -57,41 +57,56 @@ new Chart(ctx, {
 
 
 
+// common opetions
+const commonOptions = {
+    responsive: true,
+    plugins: {
+        datalabels: {
+            formatter: (value, ctx) => {
+                const data = ctx.chart.data.datasets[0].data;
+                const total = data.reduce((acc, cur) => acc + cur, 0);
+                const percentage = ((value / total) * 100).toFixed(0) + '%';
+                return percentage;
+            },
+            color: '#000',
+            font: {
+                weight: 'bold',
+                size: 14
+            }
+        }
+    }
+};
 
-// complete and uncomple task
-const regularCahrt = document.getElementById('regularChart').getContext('2d');
-new Chart(regularCahrt, {
+// regularChart
+const regularChart = document.getElementById('regularChart').getContext('2d');
+new Chart(regularChart, {
     type: 'doughnut',
     data: {
         labels: ['Completed', 'Uncompleted'],
         datasets: [{
             label: 'Task',
             data: [40, 25],
-            backgroundColor: ['#4CAF50', '#F44336',],
+            backgroundColor: ['#261FB3', '#ededed'],
             hoverOffset: 4
         }]
     },
-    options: {
-        responsive: true
-    }
+    options: commonOptions,
+    plugins: [ChartDataLabels]
 });
 
-
-
-// complete and uncomple task
-const assignCahrt = document.getElementById('assignChart').getContext('2d');
-new Chart(assignCahrt, {
+// assignChart
+const assignChart = document.getElementById('assignChart').getContext('2d');
+new Chart(assignChart, {
     type: 'doughnut',
     data: {
         labels: ['Completed', 'Uncompleted'],
         datasets: [{
             label: 'Task',
             data: [40, 60],
-            backgroundColor: ['#4CAF50', '#F44336',],
+            backgroundColor: ['#261FB3', '#ededed'],
             hoverOffset: 4
         }]
     },
-    options: {
-        responsive: true
-    }
+    options: commonOptions,
+    plugins: [ChartDataLabels]
 });
