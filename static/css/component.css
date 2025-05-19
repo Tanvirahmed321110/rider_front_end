@@ -1088,6 +1088,16 @@ textarea::placeholder {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*_________________________________*\
   ||     Scrollbar Start Here     ||
 \*__________________________________*/
@@ -2256,43 +2266,59 @@ input[type="radio"]:checked::after {
 
 
 
-/* table */
-.table-wrapper {
-    overflow-x: auto;
+/*=================   table  ===================*/
+.table-area {
+    background-color: var(--white);
+    border-radius: 4px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px;
     width: 100%;
-    -webkit-overflow-scrolling: touch;
-}
-
-.table {
-    width: max-content;
-    min-width: 100%;
     overflow-x: auto;
-    max-height: 2850px;
-    height: 100%;
 }
 
-.table li,
-.table .head {
-    display: grid;
-    grid-template-columns: 110px repeat(auto-fit, minmax(90px, .9fr));
-    gap: 2px;
-}
-
-.table .head {
-    border-bottom: 2px solid var(--primary-hover-color);
-    background-color: wheat;
-    font-size: var(--fs-md);
-}
-
-.table .td,
-.table .th {
+.table-area table {
     width: 100%;
+    min-width: 800px;
+    /* Optional: prevents table from shrinking too much */
+    border-collapse: collapse;
+
 }
 
-.table li:nth-child(even) {
-    background-color: var(--white-off);
+
+
+.table-area table th,
+.table-area table td {
+    /* min-width: 86px; */
+    text-align: left;
+    padding: 14px 20px;
+    white-space: nowrap;
 }
 
+.table-area table thead tr {
+    border-bottom: 2px solid var(--border-color2);
+}
+
+.table-area table th {
+    /* border-bottom: 1px solid red; */
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.table-area table td {
+    color: var(--gray);
+}
+
+
+.table-area table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-area table tbody tr:nth-child(odd) {
+    background-color: rgba(241, 199, 199, 0.215)
+}
 
 
 /* ========== tabs ========= */
@@ -3633,6 +3659,14 @@ ___________________________________*/
     .product-cart .base.save {
         width: 96%;
         font-size: 12px;
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        width: 44px;
+        height: 44px;
     }
 }
 

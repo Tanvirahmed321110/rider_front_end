@@ -68,7 +68,7 @@ const commonOptions = {
                 const percentage = ((value / total) * 100).toFixed(0) + '%';
                 return percentage;
             },
-            color: '#000',
+            color: '#222',
             font: {
                 weight: 'bold',
                 size: 14
@@ -76,6 +76,7 @@ const commonOptions = {
         }
     }
 };
+
 
 // regularChart
 const regularChart = document.getElementById('regularChart').getContext('2d');
@@ -86,13 +87,15 @@ new Chart(regularChart, {
         datasets: [{
             label: 'Task',
             data: [40, 25],
-            backgroundColor: ['#261FB3', '#ededed'],
+            backgroundColor: ['#1878F2', '#ededed'],
             hoverOffset: 4
         }]
     },
     options: commonOptions,
     plugins: [ChartDataLabels]
 });
+
+
 
 // assignChart
 const assignChart = document.getElementById('assignChart').getContext('2d');
@@ -103,7 +106,7 @@ new Chart(assignChart, {
         datasets: [{
             label: 'Task',
             data: [40, 60],
-            backgroundColor: ['#261FB3', '#ededed'],
+            backgroundColor: ['#1878F2', '#ededed'],
             hoverOffset: 4
         }]
     },

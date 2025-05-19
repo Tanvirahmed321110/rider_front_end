@@ -9,3 +9,11 @@ document.querySelectorAll('.regular-assign-btn button').forEach(button => {
         this.classList.add('active');
     });
 });
+
+
+
+// Usage tab for visa information page
+setupTabs('.regular-assign-btn .tab', '.tab-contents .tab-content', {
+    regular_task: 'regular_task_content',
+    assign_task: 'assign_task_content'
+});
