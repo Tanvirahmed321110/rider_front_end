@@ -565,13 +565,11 @@ img {
 ======================================
 */
 @media(max-width:991px) {
-    body {
-        min-width: 480px;
-    }
+
 
     /*=====  header  =====*/
     header {
-        padding: 8px 20px;
+        padding: 8px 12px;
     }
 
     header .mobile-header {
@@ -607,6 +605,7 @@ img {
         align-items: center;
         justify-content: space-between;
         border-top: 1px solid var(--white);
+        padding: 12px;
     }
 
     /*=====  sidebar  =====*/
@@ -615,11 +614,12 @@ img {
         width: 300px;
         transition: .3s linear;
         z-index: 12;
-        height: calc(100dvh - 80px);
+        height: calc(100% - 70px);
     }
 
     .sidebar.active {
         left: 0;
+        height: calc(100% - 70px);
     }
 
     /*=====  Main Contents  =====*/
@@ -629,7 +629,8 @@ img {
         overflow-y: auto;
         width: 100%;
         margin-left: 0;
-        padding: 14px;
+        padding: 10px;
+        padding-top: 20px;
         margin-bottom: 80px;
     }
 
@@ -637,9 +638,14 @@ img {
         height: unset;
     }
 
+    .nearest-deadline {
+        overflow-x: auto;
+    }
 
     .nearest-deadline canvas {
-        min-height: 300px;
+        min-height: 320px;
+        overflow: auto;
+        width: 460px !important;
     }
 
 }

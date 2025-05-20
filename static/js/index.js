@@ -19,6 +19,8 @@
 // });
 
 
+
+// Nearest deadline
 const ctx = document.getElementById('nearDeadline').getContext('2d');
 
 new Chart(ctx, {
@@ -33,26 +35,41 @@ new Chart(ctx, {
         }]
     },
     options: {
-        indexAxis: 'x', // Horizontal bars
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
+            x: {
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 45,
+                    minRotation: 30,
+                    font: {
+                        size: 12 // Set font size to 12px
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Task Name'
+                }
+            },
             y: {
+                beginAtZero: true,
                 title: {
                     display: true,
                     text: 'Days Left'
                 },
                 ticks: {
-                    beginAtZero: true, stepSize: 1
+                    stepSize: 1
                 }
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: 'Task Name'
-                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
             }
         }
     }
+
 });
 
 
@@ -86,7 +103,7 @@ new Chart(regularChart, {
         labels: ['Completed', 'Uncompleted'],
         datasets: [{
             label: 'Task',
-            data: [40, 25],
+            data: [70, 30],
             backgroundColor: ['#1878F2', '#ededed'],
             hoverOffset: 4
         }]

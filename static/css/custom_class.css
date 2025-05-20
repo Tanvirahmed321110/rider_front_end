@@ -21,7 +21,7 @@ body {
     font-family: var(--font-rubik);
     font-weight: var(--fw-400);
     color: var(--text-color);
-    min-width: 400px;
+    min-width: 340px;
     background-color: var(--body-bg);
 }
 
@@ -2395,15 +2395,23 @@ tr {
 
 /*________  Responsive for xs  Device  ________*/
 @media (max-width:480px) {
-    .my-p-2-xs {
+    .my-p-xs-0 {
+        padding: 0px;
+    }
+
+    .my-p-xs-1 {
+        padding: 4px;
+    }
+
+    .my-p-xs-2 {
         padding: 8px;
     }
 
-    .my-p-3-xs {
+    .my-p-xs-3 {
         padding: 12px;
     }
 
-    .my-p-4-xs {
+    .my-p-xs-4 {
         padding: 16px;
     }
 
