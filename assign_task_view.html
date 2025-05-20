@@ -29,7 +29,10 @@
 
                 <div class="my-flex-between my-w-100">
                     <!-- page name -->
-                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border ">View Task</h3>
+                    <!-- For Big device Show it -->
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border my-d-md-none">Dashboard</h3>
+                    <!-- Empty tag -->
+                    <h3 class="my-ml-5 page-name my-fw-bold my-text-border"></h3>
 
                     <!-- header right -->
                     <div class="header-right my-d-md-none my-d-flex my-align-center my-gap-10 my-h-100">
@@ -95,10 +98,9 @@
                     <!--===== For MObile Header Bottom =====-->
                     <div class="mobile-header-bottom my-d-none my-px-5">
 
-                        <!-- For cart Button -->
-                        <div class=" my-flex-center my-gap-5 ">
-                            <button id="cart-btn" class="my-btn  my-primary-btn"><i
-                                    class="ri-shopping-cart-line"></i></button>
+                        <!-- Page Name Show for Mobile -->
+                        <div class=" my-flex-center my-gap-5">
+                            <h3 class="my-text-border">Assign Task View</h3>
                         </div>
 
                         <!--=====  For Mobile Profile  =====-->
@@ -275,16 +277,16 @@
 
                                     <!-- For Assignee Name -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="task_name" class="my-fw-bold label">Assign Name</label>
-                                        <input type="text" id="task_name" class="my-mt-2">
+                                        <label for="assign_name" class="my-fw-bold label">Assign Name</label>
+                                        <input type="text" id="assign_name" class="my-mt-2">
                                     </div>
                                 </div>
 
                                 <div class="my-grid-2 my-grid-md-1 my-gap-4">
                                     <!-- For Tags -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
-                                        <label for="date_line" class="my-fw-bold label">Tags</label>
-                                        <input type="text" id="date_line" class="my-mt-2">
+                                        <label for="tags" class="my-fw-bold label">Tags</label>
+                                        <input type="text" id="tags" class="my-mt-2">
                                     </div>
 
                                     <!-- For Task Explanation -->
@@ -329,7 +331,7 @@
                                     <!-- For Task Description -->
                                     <div class="my-input-control  my-border2 my-radius-md my-p-3">
                                         <label for="description" class="my-fw-bold label">Description</label>
-                                        <textarea type="text" id="description" class="my-mt-2 "> </textarea>
+                                        <textarea id="description" class="my-mt-2 "> </textarea>
                                     </div>
                                 </div>
 
